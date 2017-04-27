@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.aga.iia.cbml/src" modelPluginID="com.aga.iia.cbml"
+    modelName="Cbml" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>cbml.ecore</foreignModel>
+  <genPackages prefix="Cbml" disposableProviderFactory="true" ecorePackage="cbml.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cbml.ecore#//RoleType">
+      <genEnumLiterals ecoreEnumLiteral="cbml.ecore#//RoleType/CO"/>
+      <genEnumLiterals ecoreEnumLiteral="cbml.ecore#//RoleType/TAO"/>
+      <genEnumLiterals ecoreEnumLiteral="cbml.ecore#//RoleType/CSC"/>
+      <genEnumLiterals ecoreEnumLiteral="cbml.ecore#//RoleType/TIC"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cbml.ecore#//InfoType">
+      <genEnumLiterals ecoreEnumLiteral="cbml.ecore#//InfoType/HealthStatus"/>
+      <genEnumLiterals ecoreEnumLiteral="cbml.ecore#//InfoType/Identity"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cbml.ecore#//OrderType">
+      <genEnumLiterals ecoreEnumLiteral="cbml.ecore#//OrderType/Support"/>
+      <genEnumLiterals ecoreEnumLiteral="cbml.ecore#//OrderType/Attack"/>
+      <genEnumLiterals ecoreEnumLiteral="cbml.ecore#//OrderType/Follow"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cbml.ecore#//ObjectType">
+      <genEnumLiterals ecoreEnumLiteral="cbml.ecore#//ObjectType/Aircraft"/>
+      <genEnumLiterals ecoreEnumLiteral="cbml.ecore#//ObjectType/Ship"/>
+      <genEnumLiterals ecoreEnumLiteral="cbml.ecore#//ObjectType/Tank"/>
+    </genEnums>
+    <genClasses ecoreClass="cbml.ecore#//Scenario">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cbml.ecore#//Scenario/tittle"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cbml.ecore#//Scenario/cast"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cbml.ecore#//Scenario/contains"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cbml.ecore#//Scenario/actuators"/>
+    </genClasses>
+    <genClasses ecoreClass="cbml.ecore#//Actor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cbml.ecore#//Actor/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cbml.ecore#//Actor/role"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cbml.ecore#//Actor/command"/>
+    </genClasses>
+    <genClasses ecoreClass="cbml.ecore#//Intent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cbml.ecore#//Intent/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cbml.ecore#//Intent/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cbml.ecore#//Intent/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cbml.ecore#//Intent/performedBy"/>
+    </genClasses>
+    <genClasses ecoreClass="cbml.ecore#//Object">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cbml.ecore#//Object/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cbml.ecore#//Object/object"/>
+    </genClasses>
+    <genClasses ecoreClass="cbml.ecore#//Order">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cbml.ecore#//Order/order"/>
+    </genClasses>
+    <genClasses ecoreClass="cbml.ecore#//Report">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cbml.ecore#//Report/info"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
